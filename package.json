@@ -1,5 +1,5 @@
 {
-	"name": "@social-network/web-client",
+	"name": "social-network-web-client",
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
