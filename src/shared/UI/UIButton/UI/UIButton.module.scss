@@ -1,16 +1,12 @@
 .UIButton {
-  cursor: pointer;
-
-  padding: 16px 24px;
-  text-align: center;
-
-  border-radius: 8px;
-
-  font: 600 var(--font-m);
-
-  transition-property: color, background-color, border-color;
-  transition-duration: 0.3s;
+	color: var(--primary-bg-color);
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	padding: 0.3rem 0.6rem;
+	border-radius: 1rem;
 }
 
-@import "styles/UIButton.variant";
-@import "styles/UIButton.size";
+.UIButton.outline {
+	color: var(--primary-color);
+	background-color: transparent;
+}

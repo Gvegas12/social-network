@@ -1,0 +1,14 @@
+.ChatInfoPanel {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.name {
+	color: black;
+}
+
+.description {
+	font: var(--font-s-2);
+	color: var(--secondary-text-color);
+}

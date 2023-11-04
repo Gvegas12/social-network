@@ -4,29 +4,29 @@ $global-fonts: (
 		sans-serif,
 	),
 	// --------- text-s ↴ ----------
-	--font-size-s: 0.7rem,
-	--font-line-s: 0.9rem,
+	--font-size-s: 0.6rem,
+	--font-line-s: 0.8rem,
 	--font-s: var(--font-size-s) / var(--font-line-s) var(--font--family-main),
 	// --------- text-s-2 ↴ ----------
-	--font-size-s-2: 0.9rem,
-	--font-line-s-2: 1.1rem,
+	--font-size-s-2: 0.8rem,
+	--font-line-s-2: 1rem,
 	--font-s-2: var(--font-size-s-2) / var(--font-line-s-2)
 		var(--font--family-main),
 	// --------- text-m ↴ ----------
-	--font-size-m: 1.1rem,
-	--font-line-m: 1.3rem,
+	--font-size-m: 1rem,
+	--font-line-m: 1.2rem,
 	--font-m: var(--font-size-m) / var(--font-line-m) var(--font--family-main),
 	// --------- text-m-2 ↴ ----------
-	--font-size-m-2: 1.3rem,
-	--font-line-m-2: 1.5rem,
+	--font-size-m-2: 1.2rem,
+	--font-line-m-2: 1.4rem,
 	--font-m-2: var(--font-size-m-2) / var(--font-line-m-2)
 		var(--font--family-main),
 	// --------- text-l ↴ ----------
-	--font-size-l: 1.5rem,
-	--font-line-l: 1.7rem,
+	--font-size-l: 1.4rem,
+	--font-line-l: 1.6rem,
 	--font-l: var(--font-size-l) / var(--font-line-l) var(--font--family-main),
 	// --------- text-xl ↴ ----------
-	--font-size-xl: 1.7rem,
-	--font-line-xl: 1.9rem,
+	--font-size-xl: 1.6rem,
+	--font-line-xl: 2rem,
 	--font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font--family-main),
 );

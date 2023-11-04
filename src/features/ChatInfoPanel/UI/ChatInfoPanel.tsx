@@ -2,17 +2,17 @@ import { FC, memo } from "react";
 
 import UI from "@/shared/UI";
 
-import s from "./UserProfilePanel.module.scss";
+import s from "./ChatInfoPanel.module.scss";
 
-interface IUserProfilePanelProps {
+interface IChatInfoPanelProps {
 	name: string;
 	description: string;
 }
 
-export const UserProfilePanel: FC<IUserProfilePanelProps> = memo(
+export const ChatInfoPanel: FC<IChatInfoPanelProps> = memo(
 	({ name, description }) => {
 		return (
-			<div className={s.UserProfilePanel}>
+			<div className={s.ChatInfoPanel}>
 				<UI.Avatar />
 				<div className={s.info}>
 					<p className={s.name}>{name}</p>

@@ -8,11 +8,9 @@ export default {
 	argTypes: {},
 } as Meta<typeof UIButton>;
 
-const StorybookComponent: StoryFn<typeof UIButton> = (args) => (
+const StoryComponent: StoryFn<typeof UIButton> = (args) => (
 	<UIButton {...args} />
 );
 
-export const Primary = StorybookComponent.bind({});
-Primary.args = {
-	children: "Success",
-};
+export const Primary = StoryComponent.bind({});
+Primary.args = {};

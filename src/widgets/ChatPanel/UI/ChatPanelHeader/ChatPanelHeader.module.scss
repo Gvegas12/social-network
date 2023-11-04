@@ -1,0 +1,15 @@
+.ChatPanelHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	border-bottom: 1px solid var(--secondary-text-color);
+}
+
+.icon {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	padding: 0.3rem;
+	background: var(--secondary-color);
+}
