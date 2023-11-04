@@ -1,0 +1,37 @@
+.animation-fade-opacity-enter {
+  opacity: 0;
+}
+.animation-fade-opacity-enter-active {
+  opacity: 1;
+}
+.animation-fade-opacity-exit {
+  opacity: 1;
+}
+.animation-fade-opacity-exit-active {
+  opacity: 0;
+}
+.animation-fade-opacity-enter-active,
+.animation-fade-opacity-exit-active {
+  transition: opacity 0.3s;
+}
+
+.animation-fade-opacity-transform-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.animation-fade-opacity-transform-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.animation-fade-opacity-transform-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.animation-fade-opacity-transform-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.animation-fade-opacity-transform-enter-active,
+.animation-fade-opacity-transform-exit-active {
+  transition: opacity, 0.5s, transform, 0.5s;
+}

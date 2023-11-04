@@ -1,0 +1,10 @@
+@import "global.colors";
+@import "global.fonts";
+@import "global.sizes";
+@import "../mixins/getVariables";
+
+:root {
+	@include getVariables($global-colors);
+	@include getVariables($global-fonts);
+	@include getVariables($global-sizes);
+}

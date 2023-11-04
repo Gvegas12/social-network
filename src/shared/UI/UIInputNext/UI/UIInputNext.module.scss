@@ -1,0 +1,16 @@
+.UIInputNext {
+  padding: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 16px;
+  outline: none;
+  font: var(--font-m-2);
+  width: 50px;
+  height: 60px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    display: none; /* <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+}

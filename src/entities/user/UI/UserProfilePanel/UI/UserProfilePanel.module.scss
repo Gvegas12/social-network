@@ -1,0 +1,14 @@
+.UserProfilePanel {
+	display: flex;
+	align-items: center;
+}
+
+.name {
+	font: var(--font-s-2);
+	color: black;
+}
+
+.activity {
+	font: var(--font-s);
+	color: var(--secondary-text-color);
+}

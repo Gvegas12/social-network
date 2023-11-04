@@ -1,0 +1,15 @@
+.UILabel {
+  display: block;
+  margin-bottom: 8px;
+
+  .labelText {
+    display: flex;
+    font: var(--font-s);
+    color: var(--gray);
+
+    .asterisk {
+      margin-left: 5px;
+      color: var(--red);
+    }
+  }
+}

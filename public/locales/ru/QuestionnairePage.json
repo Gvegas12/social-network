@@ -1,0 +1,18 @@
+{
+	"scanQRCode": "Отсканировать QR-код",
+	"invalidQRCode": "Невалидный QR-Code",
+	"cannotScan": "Не получается отсканировать?",
+	"questionnaireNumber": "Номер анкеты",
+	"notMyQuestionnaire": "Не моя анкета",
+	"findQuestionnaire": "Найти анкету",
+	"howToChangeData": "Как исправить данные?",
+	"sendQuestionnaireNumber": "Ввести номер анкеты",
+	"enterQuestionnaireNumberToInput": "Введите номер анкеты",
+	"enterQuestionnaireNumberDescription": "Введите номер анкеты. Его можно найти в мобильном приложении WBJob, на первом экране, после нажатия кнопки “Приехал на склад”.",
+	"confirmData": "Проверьте и подтвердите данные",
+	"confirmDataDescription": "Внимательно проверьте все поля анкеты. Если данные не ваши, нажмите «Не моя анкета» и повторите поиск анкеты",
+	"confirm": "Подтвердить",
+	"passport": "Паспорт",
+	"address": "Адрес",
+	"otherDocuments": "Другие документы"
+}

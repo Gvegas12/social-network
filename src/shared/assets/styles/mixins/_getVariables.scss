@@ -1,0 +1,5 @@
+@mixin getVariables($array) {
+	@each $key, $color in $array {
+		#{$key}: $color;
+	}
+}

@@ -1,0 +1,35 @@
+@import url("lib/reset.css");
+@import url("config/font.config.css");
+@import "variables/global";
+
+* {
+	font: var(--font-m);
+}
+
+body,
+.MainLayout {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	overflow: hidden;
+	background-color: var(--lightgray);
+}
+
+.MainLayout {
+	display: flex;
+
+	.page-wrapper {
+		padding: 1rem 0;
+		padding-right: 1rem;
+
+		width: calc(100% - var(--sidebar-width));
+
+		.page {
+			height: 100%;
+			border-radius: 1rem;
+			background-color: var(--primary-bg-color);
+		}
+	}
+}

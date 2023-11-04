@@ -1,0 +1,14 @@
+{
+	"title": "Фото лица",
+	"requirements": {
+		"lookAtCamera": "Лицо смотрит в камеру",
+		"openEyes": "Глаза открыты, взгляд направлен в камеру",
+		"noHats": "Без головного убора"
+	},
+	"takeFacePhoto": "Сфотографируйтесь",
+	"checkPhoto": "Проверьте фото",
+	"photoValidation": "Проверка фото",
+	"photoVerificationProcess": "Мы проверяем ваше фото. Процесс занимает до 7 минут",
+	"invalidPhoto": "Ошибка проверки фото",
+	"photoChecked": "Фото проверено"
+}

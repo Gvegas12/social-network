@@ -1,0 +1,31 @@
+%filled {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.UIButton.filled {
+  @extend %filled;
+}
+
+.UIButton.clear {
+  background: transparent;
+  color: var(--primary-color);
+  border: none;
+  padding: 0;
+  width: max-content !important;
+}
+
+.UIButton.outlined {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+
+  &:hover {
+    @extend %filled;
+  }
+}
+
+.UIButton.disabled {
+  background: var(--lightgray);
+  color: var(--lightgray-15);
+}

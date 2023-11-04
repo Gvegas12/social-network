@@ -1,0 +1,27 @@
+.template_repo: &repo
+  project: &ci_tmpl "devops/ci/templates"
+  ref: &ci_tmpl_vers "v3.8.1"
+
+variables:
+  DYNAMIC_ENV: $CI_TMPL_ENVIRONMENT_NAME
+  CI_TMPL_PROJECT: *ci_tmpl
+  CI_TMPL_PROJECT_VERSION: *ci_tmpl_vers
+
+  CI_TMPL_HELM_CHARTS: "common-deploy@v4.4.0"
+  CI_TMPL_HELM_RELEASE_NAMES: "autohiring-front"
+  CI_TMPL_HELM_RELEASE_NAMESPACE: autohiring
+
+  CI_TMPL_KUBE_CLUSTERS_DEV: "k8s.dldevel"
+  CI_TMPL_KUBE_CLUSTERS_STAGE: "k8s.stage-dp"
+  CI_TMPL_KUBE_CLUSTERS_PROD: "k8s.prod-dl,k8s.prod-dp,k8s.prod-el"
+
+  REGISTRY_PROJECT: "wbjobs"
+
+  CI_TMPL_DEPLOY_GROUPING: per-cluster
+
+  BUILD_CUSTOM_ARGS: "k8s_env=$DYNAMIC_ENV"
+
+include:
+  - { <<: *repo, file: /pipelines/universal.yml }
+# release-** for stage
+# protected tag for prod in HOWTO
