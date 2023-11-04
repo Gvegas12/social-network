@@ -9,7 +9,5 @@ interface ChatPanelWindowProps {
 }
 
 export const ChatPanelWindow: FC<ChatPanelWindowProps> = ({ className }) => {
-	return (
-		<div className={clsx(s.ChatPanelWindow, className)}>ChatPanelWindow</div>
-	);
+	return <div className={clsx(s.ChatPanelWindow, className)}></div>;
 };

@@ -12,7 +12,7 @@ function runScript() {
     if [ $? -eq 0 ]; then
         echo -e "\n\n ${Green} 🎉 [$1]: Success! ${NC} \n"
     else
-        echo -e "\n\n ${Red} 🎉 [$1]: Error! ${NC} \n"
+        echo -e "\n\n ${Red} ! [$1]: Error! ${NC} \n"
     fi
 }
 

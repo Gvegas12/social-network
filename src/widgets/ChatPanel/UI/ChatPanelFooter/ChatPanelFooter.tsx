@@ -2,6 +2,8 @@ import { FC } from "react";
 
 import clsx from "clsx";
 
+import { ChatInputPanel } from "./ChatInputPanel";
+
 import s from "./ChatPanelFooter.module.scss";
 
 interface ChatPanelFooterProps {
@@ -10,6 +12,8 @@ interface ChatPanelFooterProps {
 
 export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ className }) => {
 	return (
-		<div className={clsx(s.ChatPanelFooter, className)}>ChatPanelFooter</div>
+		<div className={clsx(s.ChatPanelFooter, className)}>
+			<ChatInputPanel />
+		</div>
 	);
 };

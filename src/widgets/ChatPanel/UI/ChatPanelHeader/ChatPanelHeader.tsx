@@ -3,9 +3,8 @@ import { FC } from "react";
 import clsx from "clsx";
 
 import { ChatInfoPanel } from "@/features/ChatInfoPanel";
-import UI from "@/shared/UI";
 
-import PhoneIcon from "./phone.svg";
+import PhoneIcon from "./icons/phone.svg";
 
 import s from "./ChatPanelHeader.module.scss";
 
@@ -21,7 +20,6 @@ export const ChatPanelHeader: FC<ChatPanelHeaderProps> = ({ className }) => {
 			</div>
 			<div className={s.actions}>
 				<PhoneIcon className={s.icon} />
-				<UI.Button>UIButton</UI.Button>
 			</div>
 		</div>
 	);
