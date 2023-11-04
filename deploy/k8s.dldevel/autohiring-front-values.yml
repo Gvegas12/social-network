@@ -1,6 +1,0 @@
-environment: dldevel
-
-env:
-  ENVIRONMENT: dev
-  VITE_API_URL: https://autohiring-ingress-controller.autohiring.svc.k8s.dldevel/webapi/api/v1
-  VITE_API_URL_AUTH: https://auth-stage-autohiring.wildberries.ru/v2
