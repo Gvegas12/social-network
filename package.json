@@ -93,5 +93,17 @@
 		"vite-plugin-static-copy": "^0.17.0",
 		"vite-plugin-svgr": "^3.2.0",
 		"vitest": "^0.34.4"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
