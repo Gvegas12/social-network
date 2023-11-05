@@ -10,24 +10,22 @@ import { ChatPanelWindow } from "./ChatPanelWindow/ChatPanelWindow";
 
 import s from "./ChatPanel.module.scss";
 
-const mockMessagesData: MessageTest[] = [
-	{
-		type: "to",
-		text: "Привет, @alias, это User @lasvegas-asdasd TEST",
-	},
-	{
-		type: "from",
-		text: "Привет, @alias, это User @lasvegas-asdasd TEST",
-	},
-];
-
 interface ChatPanelProps {
 	className?: string;
 }
 
 export const ChatPanel: FC<ChatPanelProps> = ({ className }) => {
-	const [messages, setMessages] = useState<MessageTest[]>(mockMessagesData);
 	const socketRef = useRef<WebSocket>(new WebSocket("ws://localhost:8080/ws"));
+	const [messages, setMessages] = useState<MessageTest[]>([
+		{
+			type: "to",
+			text: "Привет, @alias, это User @lasvegas-TEST",
+		},
+		{
+			type: "from",
+			text: "Привет, @alias, это User @lasvegas-TEST",
+		},
+	]);
 
 	useEffect(() => {
 		const socket = socketRef.current;
