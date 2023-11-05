@@ -1,23 +1,8 @@
-.message {
+.Message {
 	width: max-content;
 	max-width: 500px;
-	padding: 0.4rem 0.8rem;
-
-	&Text {
-		white-space: normal;
-		font-size: 0.93rem;
-		line-height: 1.3rem;
-	}
 }
 
-.message.to {
-	color: var(--accent-text-color);
-	background-color: var(--primary-color);
-	border-radius: 0.7rem 0.7rem 0 0.7rem;
+.Message.to {
 	align-self: flex-end;
-}
-.message.from {
-	color: var(--primary-text-color);
-	background-color: var(--secondary-color);
-	border-radius: 0.7rem 0.7rem 0.7rem 0;
 }

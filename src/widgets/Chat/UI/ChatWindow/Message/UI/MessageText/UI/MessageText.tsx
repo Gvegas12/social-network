@@ -1,6 +1,10 @@
 import { FC, useMemo, useRef } from "react";
 
-import s from "./Message.module.scss";
+import clsx from "clsx";
+
+import { MessageTest } from "@/entities/model";
+
+import s from "./MessageText.module.scss";
 
 const aliasRegexp = /(?:@\w{3,}\b)/g;
 const aliasColor = "rgb(6 218 0)";
@@ -11,11 +15,9 @@ const AliasLink: FC<{ text: string }> = ({ text }) => (
 	</a>
 );
 
-interface MessageTextProps {
-	text: string;
-}
+interface MessageTextProps extends MessageTest {}
 
-export const MessageText: FC<MessageTextProps> = ({ text }) => {
+export const MessageText: FC<MessageTextProps> = ({ text, type }) => {
 	const messageTextRef = useRef<HTMLParagraphElement>(null);
 
 	const resultChildren = useMemo(() => {
@@ -39,8 +41,10 @@ export const MessageText: FC<MessageTextProps> = ({ text }) => {
 	}, [text]);
 
 	return (
-		<p ref={messageTextRef} className={s.messageText}>
-			{resultChildren}
-		</p>
+		<div className={clsx(s.MessageText, s[type])}>
+			<p ref={messageTextRef} className={s.text}>
+				{resultChildren}
+			</p>
+		</div>
 	);
 };

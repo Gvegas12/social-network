@@ -1,0 +1,20 @@
+.MessageText {
+	padding: 0.4rem 0.8rem;
+}
+
+.MessageText.to {
+	color: var(--accent-text-color);
+	background-color: var(--primary-color);
+	border-radius: 0.7rem 0.7rem 0 0.7rem;
+}
+.MessageText.from {
+	color: var(--primary-text-color);
+	background-color: var(--secondary-color);
+	border-radius: 0.7rem 0.7rem 0.7rem 0;
+}
+
+.text {
+	white-space: normal;
+	font-size: 0.93rem;
+	line-height: 1.3rem;
+}

@@ -16,7 +16,7 @@ export const ChatHeader: FC<ChatHeaderProps> = ({ className }) => {
 	return (
 		<div className={clsx(s.ChatHeader, className)}>
 			<div className={s.info}>
-				<ChatInfoPanel name="Jake Cooley" description="last seen recently" />
+				<ChatInfoPanel name="Alex Gvegas" description="last seen recently" />
 			</div>
 			<div className={s.actions}>
 				<PhoneIcon className={s.icon} />
