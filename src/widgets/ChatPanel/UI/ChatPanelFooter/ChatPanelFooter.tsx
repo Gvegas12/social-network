@@ -8,32 +8,12 @@ import SendIcon from "./icons/send.svg";
 import s from "./ChatPanelFooter.module.scss";
 
 interface ChatPanelFooterProps {
-	socket: WebSocket;
+	onSubmit(message: string): void;
 }
 
-export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ socket }) => {
+export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ onSubmit }) => {
 	const txRef = useRef<HTMLTextAreaElement>(null);
 	const [txValue, setTxValue] = useState<string>("");
-
-	const onChangeTX = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-		setTxValue(e.target.value);
-	};
-
-	const onSubmitMessage = () => {
-		socket.send(txValue);
-	};
-
-	// useEffect(() => {
-	//   const selectionStart = txRef.current?.selectionStart;
-	//   if (selectedEmoji !== "" || selectionStart) {
-	//     setTxValue((prevState) => {
-	//       const start = prevState.slice(0, selectionStart);
-	//       const end = prevState.slice(selectionStart);
-	//       return start + selectedEmoji + end;
-	//     });
-	//     setSelectedEmoji("");
-	//   }
-	// }, [selectedEmoji]);
 
 	useEffect(() => {
 		if (txRef.current) {
@@ -43,6 +23,15 @@ export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ socket }) => {
 			txRef.current.style.height = `${txRef.current.scrollHeight}px`;
 		}
 	}, [txValue]);
+
+	const onChangeTX = (e: ChangeEvent<HTMLTextAreaElement>): void => {
+		setTxValue(e.target.value);
+	};
+
+	const onSubmitHandler = () => {
+		onSubmit(txValue);
+		setTxValue("");
+	};
 
 	return (
 		<div className={s.ChatPanelFooter}>
@@ -56,8 +45,24 @@ export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ socket }) => {
 				/>
 				{/* <SmilesIcon /> */}
 				<MicrophoneIcon className={s.icon} />
-				<SendIcon onClick={onSubmitMessage} className={s.icon} />
+				<SendIcon onClick={onSubmitHandler} className={s.icon} />
 			</div>
 		</div>
 	);
 };
+
+/* 
+
+	// useEffect(() => {
+	//   const selectionStart = txRef.current?.selectionStart;
+	//   if (selectedEmoji !== "" || selectionStart) {
+	//     setTxValue((prevState) => {
+	//       const start = prevState.slice(0, selectionStart);
+	//       const end = prevState.slice(selectionStart);
+	//       return start + selectedEmoji + end;
+	//     });
+	//     setSelectedEmoji("");
+	//   }
+	// }, [selectedEmoji]);
+
+*/

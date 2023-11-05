@@ -1,47 +1,21 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef } from "react";
 
 import clsx from "clsx";
+
+import { MessageTest } from "@/entities/model";
 
 import s from "./ChatPanelWindow.module.scss";
 
 interface ChatPanelWindowProps {
 	className?: string;
-	socket: WebSocket;
+	messages: MessageTest[];
 }
-
-type MessageTest = {
-	type: "from" | "to";
-	text: string;
-};
-
-const mockMessagesData: MessageTest[] = [
-	{
-		type: "to",
-		text: "[TO] text message",
-	},
-	{
-		type: "from",
-		text: "[FROM] text message",
-	},
-];
 
 export const ChatPanelWindow: FC<ChatPanelWindowProps> = ({
 	className,
-	socket,
+	messages,
 }) => {
-	const [messages, setMessages] = useState<MessageTest[]>(mockMessagesData);
 	const wrapperRef = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		console.log({ socket });
-
-		socket.onmessage = (event: MessageEvent<string>) => {
-			console.log({ event });
-			console.log("received from the server: ", event.data);
-
-			setMessages((prev) => [...prev, { text: event.data, type: "to" }]);
-		};
-	}, [socket]);
 
 	useEffect(() => {
 		const wrapper = wrapperRef.current;
