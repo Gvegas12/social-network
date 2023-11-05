@@ -13,12 +13,14 @@ $global-colors: (
 	--light-secondary-color: var(--lightgray),
 	--light-primary-bg-color: var(--white),
 	--light-primary-text-color: var(--black),
+	--light-accent-text-color: var(--white),
 	--light-secondary-text-color: var(--gray),
 	/* 
 		Main Theme Colors:
 	*/ --primary-color: var(--light-primary-color),
 	--secondary-color: var(--light-secondary-color),
 	--primary-bg-color: var(--light-primary-bg-color),
+	--accent-text-color: var(--light-accent-text-color),
 	--primary-text-color: var(--light-primary-text-color),
 	--secondary-text-color: var(--light-secondary-text-color)
 );

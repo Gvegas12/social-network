@@ -2,3 +2,37 @@
 	padding: 1rem 2rem;
 	border-top: 1px solid var(--secondary-text-color);
 }
+
+.txWrapper {
+	display: flex;
+	align-items: center;
+	padding: 10px 40px;
+
+	column-gap: 30px;
+	background-color: var(--translucent-bg-color-7);
+}
+
+.textarea {
+	outline: 1px solid black;
+	white-space: pre-line;
+	font-size: 0.93rem;
+	line-height: 1.3rem;
+	color: black;
+
+	border-radius: 6px;
+	min-height: 4rem;
+	max-height: 20vh;
+	overflow-y: auto;
+	width: 85%;
+	resize: none;
+	border: none;
+	background-color: var(--translucent-bg-color-8);
+
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
+.icon {
+	cursor: pointer;
+}

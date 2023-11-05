@@ -30,7 +30,6 @@
 		"@hookform/resolvers": "^3.3.1",
 		"axios": "^1.5.0",
 		"clsx": "^2.0.0",
-		"html5-qrcode": "^2.3.8",
 		"husky": "^8.0.3",
 		"i18next": "^23.5.1",
 		"i18next-http-backend": "^2.2.2",

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 
 import clsx from "clsx";
 
@@ -13,11 +13,13 @@ interface ChatPanelProps {
 }
 
 export const ChatPanel: FC<ChatPanelProps> = ({ className }) => {
+	const socketRef = useRef<WebSocket>(new WebSocket("ws://localhost:8080/ws"));
+
 	return (
 		<div className={clsx(s.ChatPanel, className)}>
 			<ChatPanelHeader />
-			<ChatPanelWindow />
-			<ChatPanelFooter />
+			<ChatPanelWindow socket={socketRef.current} />
+			<ChatPanelFooter socket={socketRef.current} />
 		</div>
 	);
 };

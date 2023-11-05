@@ -14,7 +14,7 @@ export const ChatInfoPanel: FC<IChatInfoPanelProps> = memo(
 		return (
 			<div className={s.ChatInfoPanel}>
 				<UI.Avatar />
-				<div className={s.info}>
+				<div>
 					<p className={s.name}>{name}</p>
 					<p className={s.description}>{description}</p>
 				</div>

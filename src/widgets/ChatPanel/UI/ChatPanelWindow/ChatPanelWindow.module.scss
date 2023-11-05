@@ -1,5 +1,41 @@
 .ChatPanelWindow {
 	flex-grow: 1;
+	overflow-y: scroll;
+}
+
+.messages {
+	height: 70vh;
 	padding: 0 2rem;
 	padding-bottom: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex-basis: auto;
+	row-gap: 0.5rem;
+}
+
+.message {
+	width: max-content;
+	max-width: 500px;
+	padding: 0.6rem 0.8rem;
+
+	&Text {
+		white-space: normal;
+		word-break: break-all;
+		font-size: 0.93rem;
+		line-height: 1.3rem;
+	}
+}
+
+.message.to {
+	color: var(--accent-text-color);
+	background-color: var(--primary-color);
+	border-radius: 0.7rem 0.7rem 0 0.7rem;
+	align-self: flex-end;
+}
+.message.from {
+	color: var(--primary-text-color);
+	background-color: var(--secondary-color);
+	border-radius: 0.7rem 0.7rem 0.7rem 0;
 }
