@@ -1,0 +1,9 @@
+.MessageDate {
+	font: var(--font-s);
+	color: var(--secondary-text-color);
+	margin-top: 0.1rem;
+}
+
+.MessageDate.to {
+	color: var(--secondary-color);
+}

@@ -4,6 +4,8 @@ import clsx from "clsx";
 
 import { MessageTest } from "@/entities/model";
 
+import { MessageDate } from "./MessageDate";
+
 import s from "./MessageText.module.scss";
 
 const aliasRegexp = /(?:@\w{3,}\b)/g;
@@ -45,6 +47,7 @@ export const MessageText: FC<MessageTextProps> = ({ text, type }) => {
 			<p ref={messageTextRef} className={s.text}>
 				{resultChildren}
 			</p>
+			<MessageDate type={type} />
 		</div>
 	);
 };
