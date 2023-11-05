@@ -4,10 +4,11 @@ import clsx from "clsx";
 
 import s from "./UIAvatar.module.scss";
 
-interface UIAvatarProps {
+export interface UIAvatarProps {
 	className?: string;
+	active?: boolean;
 }
 
-export const UIAvatar: FC<UIAvatarProps> = ({ className }) => {
-	return <div className={clsx(s.UIAvatar, className)} />;
+export const UIAvatar: FC<UIAvatarProps> = ({ className, active }) => {
+	return <div className={clsx(s.UIAvatar, active && s.active, className)} />;
 };

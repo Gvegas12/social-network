@@ -1,12 +1,13 @@
 import { FC, memo } from "react";
 
-import UI from "@/shared/UI";
+import UI, { UIAvatarProps } from "@/shared/UI";
 
 import s from "./ChatInfoPanel.module.scss";
 
 interface IChatInfoPanelProps {
 	name: string;
 	description: string;
+	active: UIAvatarProps["active"];
 }
 
 export const ChatInfoPanel: FC<IChatInfoPanelProps> = memo(

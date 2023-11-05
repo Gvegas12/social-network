@@ -2,5 +2,9 @@
 	border-radius: 100%;
 	width: 2.3rem;
 	height: 2.3rem;
-	background-color: var(--primary-color);
+	background-color: rgba(53, 53, 53, 0.5); // TODO test
+}
+
+.UIAvatar.active {
+	border: 0.2rem solid var(--primary-color);
 }
