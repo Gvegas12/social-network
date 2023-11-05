@@ -1,12 +1,29 @@
+$scrollbar-width: 0.5rem;
+$scrollbar-background: #dfdfdf;
+$scrollbar-color: var(--primary-color);
+
 .ChatPanelWindow {
 	flex-grow: 1;
-	overflow-y: scroll;
+	overflow-y: auto;
+
+	/* Плашка-бегунок и фон */
+	scrollbar-color: $scrollbar-color $scrollbar-background;
+	&::-webkit-scrollbar {
+		width: $scrollbar-width;
+	}
+	&::-webkit-scrollbar-thumb {
+		/* Плашка-бегунок */
+		background: $scrollbar-color;
+	}
+	&::-webkit-scrollbar-track {
+		/* Фон */
+		background: $scrollbar-background;
+	}
 }
 
 .messages {
-	height: 70vh;
-	padding: 0 2rem;
-	padding-bottom: 1rem;
+	padding: 1rem 2rem;
+	padding-right: calc(1rem + $scrollbar-width);
 
 	display: flex;
 	flex-direction: column;
