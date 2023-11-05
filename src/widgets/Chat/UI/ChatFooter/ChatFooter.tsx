@@ -5,13 +5,13 @@ import UploadFileIcon from "./icons/paperclip.svg";
 import SendIcon from "./icons/send.svg";
 // import SmilesIcon from "./icons/smiles.svg";
 
-import s from "./ChatPanelFooter.module.scss";
+import s from "./ChatFooter.module.scss";
 
-interface ChatPanelFooterProps {
+interface ChatFooterProps {
 	onSubmit(message: string): void;
 }
 
-export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ onSubmit }) => {
+export const ChatFooter: FC<ChatFooterProps> = ({ onSubmit }) => {
 	const txRef = useRef<HTMLTextAreaElement>(null);
 	const [txValue, setTxValue] = useState<string>("");
 
@@ -34,7 +34,7 @@ export const ChatPanelFooter: FC<ChatPanelFooterProps> = ({ onSubmit }) => {
 	};
 
 	return (
-		<div className={s.ChatPanelFooter}>
+		<div className={s.ChatFooter}>
 			<div className={s.txWrapper}>
 				<UploadFileIcon className={s.icon} />
 				<textarea

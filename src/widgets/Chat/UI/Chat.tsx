@@ -4,17 +4,17 @@ import clsx from "clsx";
 
 import { MessageTest } from "@/entities/model";
 
-import { ChatPanelFooter } from "./ChatPanelFooter/ChatPanelFooter";
-import { ChatPanelHeader } from "./ChatPanelHeader/ChatPanelHeader";
-import { ChatPanelWindow } from "./ChatPanelWindow/ChatPanelWindow";
+import { ChatFooter } from "./ChatFooter/ChatFooter";
+import { ChatHeader } from "./ChatHeader/ChatHeader";
+import { ChatWindow } from "./ChatWindow/ChatWindow";
 
-import s from "./ChatPanel.module.scss";
+import s from "./Chat.module.scss";
 
-interface ChatPanelProps {
+interface ChatProps {
 	className?: string;
 }
 
-export const ChatPanel: FC<ChatPanelProps> = ({ className }) => {
+export const Chat: FC<ChatProps> = ({ className }) => {
 	const socketRef = useRef<WebSocket>(new WebSocket("ws://localhost:8080/ws"));
 	const [messages, setMessages] = useState<MessageTest[]>([
 		{
@@ -44,10 +44,10 @@ export const ChatPanel: FC<ChatPanelProps> = ({ className }) => {
 	};
 
 	return (
-		<div className={clsx(s.ChatPanel, className)}>
-			<ChatPanelHeader />
-			<ChatPanelWindow messages={messages} />
-			<ChatPanelFooter onSubmit={onSubmitMessage} />
+		<div className={clsx(s.Chat, className)}>
+			<ChatHeader />
+			<ChatWindow messages={messages} />
+			<ChatFooter onSubmit={onSubmitMessage} />
 		</div>
 	);
 };

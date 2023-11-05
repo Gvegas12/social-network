@@ -6,15 +6,15 @@ import { ChatInfoPanel } from "@/features/ChatInfoPanel";
 
 import PhoneIcon from "./icons/phone.svg";
 
-import s from "./ChatPanelHeader.module.scss";
+import s from "./ChatHeader.module.scss";
 
-interface ChatPanelHeaderProps {
+interface ChatHeaderProps {
 	className?: string;
 }
 
-export const ChatPanelHeader: FC<ChatPanelHeaderProps> = ({ className }) => {
+export const ChatHeader: FC<ChatHeaderProps> = ({ className }) => {
 	return (
-		<div className={clsx(s.ChatPanelHeader, className)}>
+		<div className={clsx(s.ChatHeader, className)}>
 			<div className={s.info}>
 				<ChatInfoPanel name="Jake Cooley" description="last seen recently" />
 			</div>

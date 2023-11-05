@@ -6,17 +6,14 @@ import { MessageTest } from "@/entities/model";
 
 import { Message } from "./Message";
 
-import s from "./ChatPanelWindow.module.scss";
+import s from "./ChatWindow.module.scss";
 
-interface ChatPanelWindowProps {
+interface ChatWindowProps {
 	className?: string;
 	messages: MessageTest[];
 }
 
-export const ChatPanelWindow: FC<ChatPanelWindowProps> = ({
-	className,
-	messages,
-}) => {
+export const ChatWindow: FC<ChatWindowProps> = ({ className, messages }) => {
 	const wrapperRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -30,7 +27,11 @@ export const ChatPanelWindow: FC<ChatPanelWindowProps> = ({
 	}, [messages]);
 
 	return (
-		<div ref={wrapperRef} className={clsx(s.ChatPanelWindow, className)}>
+		<div
+			ref={wrapperRef}
+			onContextMenu={(e) => console.log(e)}
+			className={clsx(s.ChatWindow, className)}
+		>
 			<div className={s.messages}>
 				{messages?.map((data, i) => <Message key={i} {...data} />)}
 			</div>

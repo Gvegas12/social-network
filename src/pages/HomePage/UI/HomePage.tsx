@@ -1,9 +1,9 @@
 import { FC } from "react";
 
-import { ChatPanel } from "@/widgets/ChatPanel";
+import { Chat } from "@/widgets/Chat";
 
 const HomePage: FC = () => {
-	return <ChatPanel />;
+	return <Chat />;
 };
 
 export default HomePage;
