@@ -13,11 +13,11 @@ import s from "./ChatPanel.module.scss";
 const mockMessagesData: MessageTest[] = [
 	{
 		type: "to",
-		text: "[TO] text message",
+		text: "Привет, @alias, это User @lasvegas-asdasd TEST",
 	},
 	{
 		type: "from",
-		text: "[FROM] text message",
+		text: "Привет, @alias, это User @lasvegas-asdasd TEST",
 	},
 ];
 

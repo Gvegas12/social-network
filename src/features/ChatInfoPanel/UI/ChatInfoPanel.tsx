@@ -7,7 +7,7 @@ import s from "./ChatInfoPanel.module.scss";
 interface IChatInfoPanelProps {
 	name: string;
 	description: string;
-	active: UIAvatarProps["active"];
+	active?: UIAvatarProps["active"];
 }
 
 export const ChatInfoPanel: FC<IChatInfoPanelProps> = memo(
